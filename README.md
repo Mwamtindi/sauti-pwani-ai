@@ -50,7 +50,12 @@ sauti_pwani_project/
 Follow these sequential steps to run the framework locally inside your development workspace:
 
 ### 1. Clone or Create the Workspace
-Ensure all your files (`app.py`, `forensic_engine.py`, `threat_model.py`) are placed together inside a single directory named `sauti_pwani_project`.
+
+Clone the repository
+```bash
+git clone https://github.com/Mwamtindi/sauti-pwani-ai.git
+cd sauti-pwani-ai
+```
 
 ### 2. Set Up a Clean Virtual Environment
 Open your terminal window and execute the following commands based on your operating system:
@@ -94,4 +99,11 @@ This project is explicitly structured to support and complement the statutory re
 3. **The Data Protection Act (2019)** – Maintained through zero-trust local network processing and immediate raw evidence deletion cycles.
 
 ---
+
+## Author
+
+**Mwamtindi**
+
+GitHub: https://github.com/Mwamtindi
+
 *Developed as an award-winning Capstone Project for IT/Cybersecurity Regional Innovation.*
