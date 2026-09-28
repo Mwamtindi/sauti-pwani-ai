@@ -8,6 +8,12 @@ Traditional security platforms fail to capture local nuances. This engine addres
 
 ## 🚀 Core Architectural Features
 
+* **High-Tech Cyber Command Dashboard**  
+  Features an integrated terminal-style dark mode theme override with glowing, dynamic reactive threat badges (🟢 STATUS CLEAR / 🟡 SUSPICIOUS TARGET / 🔴 THREAT DETECTED) that swap layout properties instantly depending on input classifications.
+
+* **Multi-Codec Audio Conversion Pipeline**  
+  Natively processes both uncompressed evidentiary streams and heavily compressed telephone or chat artifacts (supporting `.wav`, `.mp3`, `.aac`, and `.m4a` file matrices) through automated back-end codec transformations.
+
 * **Layer 1: Forensic Chain-of-Custody Verification**  
   Implements a stream-based block reader using `hashlib` to generate an immutable **SHA-256 digital fingerprint** of the target file. This mathematically enforces verbatim file preservation compliant with modern cyber-law standards.
   
@@ -15,20 +21,30 @@ Traditional security platforms fail to capture local nuances. This engine addres
   Leverages the `mutagen` framework to deep-scan file headers and comment blocks, automatically flagging suspicious, high-density data injections often used to mask malicious payloads.
 
 * **Layer 3: Localized Dialect ML Heuristics**  
-  Translates phonetic structures into numerical feature arrays via **TF-IDF Vectorization** and screens text patterns using a **Multinomial Naive Bayes** classifier trained on a regional coastal threat intelligence matrix.
+  Translates linguistic structures into numerical feature arrays via **TF-IDF Vectorization** and screens text patterns using a **Multinomial Naive Bayes** classifier trained on an explicit regional coastal threat intelligence matrix.
 
 * **Layer 4: Zero-Trust Localized Compliance Engine**  
   Built entirely as a local, zero-network-dependency system to prevent sensitive intelligence data leakage. Automatically generates a certified, human-scannable `.txt` evidence report compliant with **Section 106B of the Kenya Evidence Act**. Includes an automated ephemeral data clean-up cycle to ensure post-analysis privacy.
 
 ---
 
+## 🧠 Regional Slang Intelligence Dictionary
+
+The underlying text classification matrix contains localized keyword markers mapped to discrete threat indices:
+* **High Risk Target Keywords:** Tracks tactical operational phrases like *"kuchoma base"*, *"kuchukua chuma zetu"*, and coordination locations like *"Likoni Ferry"*, *"Mtwapa base"*, or *"Bamburi"*.
+* **Medium Risk Target Keywords:** Identifies cryptic messaging slang like *"mzigo kwa corner"*, *"wazee wa kazi"*, or *"kila mtu ako rada"*.
+* **Low Risk Base Markers:** Safe everyday Swahili/Mombasa cultural baseline phrasing including *"tule halua"*, *"sokoni mwananyamala"*, or *"tukutane chini ya mwembe"*.
+
+---
+
 ## 🛠️ Technology Stack
 
-* **Language:** Python 3.10+
-* **Interface UI Framework:** Streamlit
-* **Binary Forensics & Tag Carving:** Mutagen
-* **Machine Learning / Vectorization:** Scikit-Learn
-* **File System Automation:** Built-in Python I/O (`hashlib`, `os`, `datetime`)
+* **Language:** Python 3.10+ [3]
+* **Interface UI Framework:** Streamlit [3]
+* **Codec Processing Utilities:** Pydub [1]
+* **Binary Forensics & Tag Carving:** Mutagen [3]
+* **Machine Learning / Vectorization:** Scikit-Learn [3]
+* **File System Automation:** Built-in Python I/O (`hashlib`, `os`, `datetime`) [3]
 
 ---
 
@@ -37,9 +53,9 @@ Traditional security platforms fail to capture local nuances. This engine addres
 ```text
 sauti_pwani_project/
 │
-├── app.py              # Core Streamlit Web App Interface & Exporter
-├── forensic_engine.py  # Binary analyzer, Metadata carver, SHA-256 calculator
-├── threat_model.py     # TF-IDF & Multinomial Naive Bayes regional text classifier
+├── app.py              # Core Cyber Command UI Interface & Log Exporter
+├── forensic_engine.py  # Binary metadata carver & SHA-256 calculator
+├── threat_model.py     # TF-IDF & Multinomial Naive Bayes risk classifier
 └── README.md           # Project system specification documentation
 ```
 
@@ -49,9 +65,9 @@ sauti_pwani_project/
 
 Follow these sequential steps to run the framework locally inside your development workspace:
 
-### 1. Clone or Create the Workspace
+### 1. Clone the Workspace
 
-Clone the repository
+Clone the repository to your local computer:
 ```bash
 git clone https://github.com/Mwamtindi/sauti-pwani-ai.git
 cd sauti-pwani-ai
@@ -79,7 +95,7 @@ source venv/bin/activate
 ### 3. Install System Dependencies
 With your virtual environment active—indicated by `(venv)` appearing at the start of your terminal prompt—install the required Python packages:
 ```bash
-pip install streamlit mutagen scikit-learn
+pip install streamlit mutagen scikit-learn pydub
 ```
 
 ### 4. Launch the Engine
@@ -87,7 +103,7 @@ Run the native deployment command to spin up the local web app dashboard session
 ```bash
 streamlit run app.py
 ```
-The application will automatically spin up and serve the visual dashboard on your local loopback address at: **`http://localhost:8501`**
+The application will automatically spin up and serve the visual dashboard on your local loopback address at: **`http://localhost:8501`** [3]
 
 ---
 
@@ -102,8 +118,10 @@ This project is explicitly structured to support and complement the statutory re
 
 ## Author
 
-**Mwamtindi**
+**Mwamtindi (Shabani Athuman)** [3, 0.1.7]
 
-GitHub: https://github.com/Mwamtindi
+* GitHub: [@Mwamtindi](https://github.com/Mwamtindi) [3, 0.1.7]
+* LinkedIn: [shabani-mwamtindi](https://www.linkedin.com/in/shabani-mwamtindi/)
 
-*Developed as an award-winning Capstone Project for IT/Cybersecurity Regional Innovation.*
+---
+*Developed as an award-winning Capstone Project for IT/Cybersecurity Regional Innovation.* [3]
