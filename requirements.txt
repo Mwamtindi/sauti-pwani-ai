@@ -1,4 +1,5 @@
 streamlit
 mutagen
 scikit-learn
+audioop-lts
 pydub
