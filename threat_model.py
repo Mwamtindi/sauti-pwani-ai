@@ -1,7 +1,6 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
-# Regional threat-intel data matrix (Sheng/Coastal Swahili operational keywords)
 # Refined Regional Threat-Intel Data Matrix
 # Categories: High Risk (Operational/Coordination), Medium Risk (Suspicious), Low Risk (Safe/Daily life)
 TRAINING_DATA = [
@@ -32,9 +31,16 @@ TRAINING_DATA = [
     ("kazi yangu ya mchana ni kuendesha tuktuk hapa mombasa county", "Low Risk")
 ]
 
-
 def analyze_transcript_risk(text_input):
     """Vectorizes and classifies incoming transcripts based on local threat matrices."""
+    
+    # CRASH PROTECTION LAYER: Intercept empty string outputs safely before vector processing
+    if not text_input or not text_input.strip():
+        return {
+            "risk_level": "Low Risk",
+            "confidence_score": "100.00%"
+        }
+        
     texts, labels = zip(*TRAINING_DATA)
     
     # Initialize basic TF-IDF Vectorizer and Naive Bayes Classifier
@@ -44,11 +50,14 @@ def analyze_transcript_risk(text_input):
     clf = MultinomialNB()
     clf.fit(X, labels)
     
-    # Process the live input string
+    # Process the live input string safely
     input_vector = vectorizer.transform([text_input.lower()])
+    
+    # Secure extraction of array values using zero-index slicing
     prediction = clf.predict(input_vector)[0]
     probabilities = clf.predict_proba(input_vector)[0]
     
+    # Get the confidence score based on the highest probability class
     confidence = max(probabilities) * 100
     
     return {
